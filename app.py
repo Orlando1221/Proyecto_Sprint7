@@ -5,9 +5,7 @@ from pathlib import Path
 
 st.set_page_config(page_title="Panel de control - Vehículos", layout="wide")
 
-# ============================
-# CSS — SOLO CAMBIOS PEDIDOS
-# ============================
+
 css = """
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600;700&display=swap');
 
@@ -86,9 +84,7 @@ html, body, [class*="css"] {
 st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 
-# ============================
-# CARGA DATA
-# ============================
+
 @st.cache_data
 def load_data(path):
     return pd.read_csv(path)
@@ -102,9 +98,6 @@ df = df.rename(columns={
 })
 
 
-# ============================
-# ENCABEZADO
-# ============================
 st.markdown(
     '<div class="hero">'
     '<div class="title">Panel de control — Anuncios de vehículos</div>'
@@ -114,17 +107,12 @@ st.markdown(
 )
 
 
-# ============================
-# TABLA — CONTENEDORES CORREGIDOS
-# ============================
+
 st.markdown('<div class="element-container full-width-container">', unsafe_allow_html=True)
 st.dataframe(df, use_container_width=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 
-# ============================
-# BAJAR LOS BOTONES AQUÍ
-# ============================
 
 st.markdown(
     '<div class="small-note">Pulsa un botón para generar el gráfico; la visualización aparecerá debajo de la tabla.</div>',
@@ -140,28 +128,24 @@ with colB:
     btn_scatter = st.button("Construir dispersión — Precio vs Millas (mi)")
 
 
-# ============================
-# GRÁFICOS
-# ============================
+
 x_col = "millas_mi"
 y_col = "precio"
 
 if btn_hist:
-    fig = px.histogram(df, x=x_col, nbins=50, template='plotly_dark',
+    fig = px.histogram(df, x=x_col, nbins=45, template='plotly_dark',
                        title="Histograma — Millas recorridas (mi)")
-    fig.update_layout(font=dict(size=16))
+    fig.update_layout(font=dict(size=14))
     st.plotly_chart(fig, use_container_width=True)
 
 if btn_scatter:
     fig = px.scatter(df, x=x_col, y=y_col, template='plotly_dark',
                      title="Dispersión — Precio vs Millas (mi)")
-    fig.update_layout(font=dict(size=16))
+    fig.update_layout(font=dict(size=14))
     st.plotly_chart(fig, use_container_width=True)
 
 
-# ============================
-# DESCARGA
-# ============================
+
 if Path("vehicles_us_clean_sample.csv").exists():
     with open("vehicles_us_clean_sample.csv","rb") as f:
         st.download_button("Descargar muestra limpia (CSV)", f,

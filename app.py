@@ -16,7 +16,7 @@ css = """
   --text: #f7fbfc;
   --accent: #6fa8c8;
   --gold: #d3a94a;
-  --card-shadow: 2 20px 60px rgba(2,12,18,0.55);
+  --card-shadow: 0 20px 60px rgba(2,12,18,0.55);
 }
 
 html, body, [class*="css"] {
@@ -33,7 +33,7 @@ html, body, [class*="css"] {
 .hero .title {
     font-family: 'Playfair Display', serif;
     font-size: 64px; /* <-- AUMENTADO */
-    font-weight: 600;
+    font-weight: 400;
 }
 .hero .subtitle {
     color: var(--muted);
@@ -44,17 +44,17 @@ html, body, [class*="css"] {
 /* Contenedor general */
 .element-container {
     background: rgba(15,58,74,0.12);
-    border-radius: 23px;
-    padding: 23px;
+    border-radius: 20px;
+    padding: 20px;
     box-shadow: var(--card-shadow);
-    border: 1.4px solid rgba(255,255,255,0.02);
-    margin-bottom: 14px;
+    border: 1px solid rgba(255,255,255,0.02);
+    margin-bottom: 10px;
 }
 
 /* TABLA FULL WIDTH + LETRA MÁS GRANDE */
 .full-width-container .stDataFrame table {
     width: 100% !important;
-    font-size: 1.4rem !important; /* <-- AUMENTADO */
+    font-size: 1rem !important; /* <-- AUMENTADO */
 }
 
 /* BOTONES PEQUEÑOS Y BONITOS */
@@ -62,10 +62,10 @@ html, body, [class*="css"] {
     background-color: transparent !important;
     color: var(--text) !important;
     border: 1px solid rgba(111,154,178,0.12) !important;
-    padding: 22px 51px;
-    border-radius: 14px;
+    padding: 20px 45px;
+    border-radius: 10px;
     width: auto !important;
-    font-weight: 730;
+    font-weight: 700;
 }
 .stButton>button:hover {
     background-color: var(--gold) !important;
@@ -74,7 +74,7 @@ html, body, [class*="css"] {
 
 /* Nota del usuario */
 .small-note {
-    margin-top: 13px;
+    margin-top: 10px;
     margin-bottom: 26px;
     color: var(--muted);
     font-size: 1rem;

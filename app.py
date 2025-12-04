@@ -34,40 +34,40 @@ html, body, [class*="css"] {
 }
 .hero .title {
     font-family: 'Playfair Display', serif;
-    font-size: 76px; /* <-- AUMENTADO */
-    font-weight: 700;
+    font-size: 64px; /* <-- AUMENTADO */
+    font-weight: 600;
 }
 .hero .subtitle {
     color: var(--muted);
-    font-size: 39px;
+    font-size: 35px;
     text-transform: uppercase;
 }
 
 /* Contenedor general */
 .element-container {
     background: rgba(15,58,74,0.12);
-    border-radius: 25px;
-    padding: 25px;
+    border-radius: 23px;
+    padding: 23px;
     box-shadow: var(--card-shadow);
-    border: 1.7px solid rgba(255,255,255,0.02);
-    margin-bottom: 18px;
+    border: 1.4px solid rgba(255,255,255,0.02);
+    margin-bottom: 14px;
 }
 
 /* TABLA FULL WIDTH + LETRA MÁS GRANDE */
 .full-width-container .stDataFrame table {
     width: 100% !important;
-    font-size: 1.7rem !important; /* <-- AUMENTADO */
+    font-size: 1.4rem !important; /* <-- AUMENTADO */
 }
 
 /* BOTONES PEQUEÑOS Y BONITOS */
 .stButton>button {
     background-color: transparent !important;
     color: var(--text) !important;
-    border: 2px solid rgba(111,154,178,0.12) !important;
-    padding: 25px 55px;
-    border-radius: 17px;
+    border: 1px solid rgba(111,154,178,0.12) !important;
+    padding: 22px 51px;
+    border-radius: 14px;
     width: auto !important;
-    font-weight: 800;
+    font-weight: 730;
 }
 .stButton>button:hover {
     background-color: var(--gold) !important;
@@ -76,8 +76,8 @@ html, body, [class*="css"] {
 
 /* Nota del usuario */
 .small-note {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 13px;
+    margin-bottom: 26px;
     color: var(--muted);
     font-size: 1rem;
 }

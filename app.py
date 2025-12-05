@@ -150,3 +150,6 @@ if Path("vehicles_us_clean_sample.csv").exists():
     with open("vehicles_us_clean_sample.csv","rb") as f:
         st.download_button("Descargar muestra limpia (CSV)", f,
             file_name="vehicles_us_clean_sample.csv", mime="text/csv")
+
+
+# 

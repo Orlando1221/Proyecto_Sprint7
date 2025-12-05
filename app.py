@@ -25,7 +25,7 @@ html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
 }
 
-/* Título: MÁS GRANDE */
+
 .hero {
     text-align: center;
     padding: 64px 16px 22px 16px;
@@ -51,13 +51,13 @@ html, body, [class*="css"] {
     margin-bottom: 10px;
 }
 
-/* TABLA FULL WIDTH + LETRA MÁS GRANDE */
+
 .full-width-container .stDataFrame table {
     width: 100% !important;
     font-size: 1rem !important; /* <-- AUMENTADO */
 }
 
-/* BOTONES PEQUEÑOS Y BONITOS */
+
 .stButton>button {
     background-color: transparent !important;
     color: var(--text) !important;
